@@ -24,7 +24,7 @@ const server = http.createServer(async (req, res) => {
     
     let results = jsonData;
 
-    // Фільтрація
+    // Фільтрація за облаштуванням
     if (queryObject.furnished === 'true') {
       results = results.filter(h => h.furnishingstatus === 'furnished');
     } else if (queryObject.furnished === 'false') {
